@@ -22,15 +22,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'simplecov-rcov'
-  # s.add_development_dependency 'webmock'
-  # s.add_development_dependency 'pry'
-  # s.add_development_dependency 'vcr'
-  # s.add_development_dependency 'fuubar'
-  # s.add_development_dependency 'geminabox'
-  # s.add_runtime_dependency 'activesupport'
-  # s.add_runtime_dependency 'activemodel'
-  # s.add_runtime_dependency 'rest-client'
-  # s.add_runtime_dependency 'yajl-ruby'
-  # s.add_runtime_dependency 'rest_model', ">= 0.2"
-  # s.add_runtime_dependency 'locaweb-authentication-client', '~> 0.11.3'
+  s.add_runtime_dependency 'activesupport'
 end

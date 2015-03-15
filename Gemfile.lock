@@ -1,71 +1,24 @@
 PATH
   remote: .
   specs:
-    sapi_client (0.4.6)
-      activemodel
+    descendants-loader (0.0.1)
       activesupport
-      locaweb-authentication-client (~> 0.11.3)
-      rest-client
-      rest_model (>= 0.2)
-      yajl-ruby
 
 GEM
-  remote: http://gems.locaweb.com.br/
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    activemodel (4.1.5)
-      activesupport (= 4.1.5)
-      builder (~> 3.1)
-    activesupport (4.1.5)
-      i18n (~> 0.6, >= 0.6.9)
+    activesupport (4.2.0)
+      i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.5)
-    builder (3.1.4)
-    coderay (1.0.9)
-    crack (0.4.1)
-      safe_yaml (~> 0.9.0)
     diff-lcs (1.2.4)
-    faraday (0.9.0)
-      multipart-post (>= 1.2, < 3)
-    fuubar (1.2.1)
-      rspec (~> 2.0)
-      rspec-instafail (~> 0.2.0)
-      ruby-progressbar (~> 1.0)
-    geminabox (0.12.4)
-      builder
-      faraday
-      httpclient (>= 2.2.7)
-      nesty
-      sinatra (>= 1.2.7)
-    httpclient (2.3.4.1)
-    i18n (0.6.11)
-    json (1.8.1)
-    locaweb-authentication-client (0.11.6)
-      rest-client
-    method_source (0.8.1)
-    mime-types (2.3)
-    minitest (5.4.0)
+    i18n (0.7.0)
+    json (1.8.2)
+    minitest (5.5.1)
     multi_json (1.8.0)
-    multipart-post (2.0.0)
-    nesty (1.0.2)
-    netrc (0.7.7)
-    pry (0.9.12.1)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
-    rack (1.5.2)
-    rack-protection (1.5.2)
-      rack
     rake (10.0.4)
-    rest-client (1.7.2)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
-    rest_model (0.3.1)
-      activesupport (>= 3.2)
-      i18n (>= 0.6)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -73,42 +26,23 @@ GEM
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-instafail (0.2.4)
     rspec-mocks (2.13.1)
-    ruby-progressbar (1.4.0)
-    safe_yaml (0.9.7)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
-    sinatra (1.4.4)
-      rack (~> 1.4)
-      rack-protection (~> 1.4)
-      tilt (~> 1.3, >= 1.3.4)
-    slop (3.4.4)
-    thread_safe (0.3.4)
-    tilt (1.4.1)
+    thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    vcr (2.8.0)
-    webmock (1.13.0)
-      addressable (>= 2.2.7)
-      crack (>= 0.3.2)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  fuubar
-  geminabox
-  pry
+  descendants-loader!
   rake
   rspec
-  sapi_client!
   simplecov
   simplecov-rcov
-  vcr
-  webmock

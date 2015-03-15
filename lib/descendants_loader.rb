@@ -1,5 +1,9 @@
-require 'class_finder'
-require 'version'
+require 'active_support/core_ext/string/inflections'
+
+path = File.expand_path(File.dirname(__FILE__))
+Dir["#{path}/descendants_loader/**/*.rb"].each do |file|
+  require file
+end
 
 module DescendantsLoader
   def self.included(base)

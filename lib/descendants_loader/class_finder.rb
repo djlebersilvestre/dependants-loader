@@ -27,26 +27,26 @@ module DescendantsLoader
       private
 
       def find_related_source_files(klass)
-        locations = methods(klass).map(&:source_location)
+        locations = list_methods(klass).map(&:source_location)
 
         locations.compact.map(&:first)
       end
 
-      def methods(klass)
-        class_methods(klass) +
-          instance_methods(klass) +
-          private_methods(klass)
+      def list_methods(klass)
+        list_class_methods(klass) +
+          list_instance_methods(klass) +
+          list_private_methods(klass)
       end
 
-      def class_methods(klass)
+      def list_class_methods(klass)
         klass.methods(false).map { |m| klass.method(m) }
       end
 
-      def instance_methods(klass)
+      def list_instance_methods(klass)
         klass.instance_methods(false).map { |m| klass.instance_method(m) }
       end
 
-      def private_methods(klass)
+      def list_private_methods(klass)
         klass.new.private_methods(false).map { |m| klass.instance_method(m) }
       end
 
