@@ -1,0 +1,14 @@
+plugin_directory: 'lib/git_hooks'
+
+PreCommit:
+  Rubocop:
+    on_warn: fail
+
+  TrailingWhitespace:
+    exclude:
+      - '/spec/fixtures/vcr_cassettes/**/*.yml'
+
+CommitMsg:
+  TextWidth:
+    max_subject_width: 80
+    max_body_width: 72
