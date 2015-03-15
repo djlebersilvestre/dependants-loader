@@ -3,10 +3,10 @@ require 'simplecov'
 
 SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
 SimpleCov.start do
-  # `git checkout origin/master coverage/.last_run.json`
-# 
-  # minimum_coverage(95)
-  # maximum_coverage_drop(2)
+  `git checkout origin/master coverage/.last_run.json`
+
+  minimum_coverage(95)
+  maximum_coverage_drop(2)
 
   add_filter 'spec/'
   add_filter 'vendor/'
