@@ -11,16 +11,3 @@ AllCops:
   Include:
     - '**/*.gemspec'
     - '**/Rakefile'
-
-  Exclude:
-    - 'config/**/*'
-    - 'vendor/**/*'
-    - 'db/**/*'
-    - 'bin/rails'
-    - 'bin/spring'
-    - 'bin/rake'
-
-
-  # By default, the rails cops are not run. Override in project or home
-  # directory .rubocop.yml files, or by giving the -R/--rails option.
-  RunRailsCops: true
