@@ -16,6 +16,7 @@ bundle install --path vendor/bundle
 echo 'Adding base gems to gemset'
 gem install rubocop
 gem install overcommit
+gem install rubycritic
 
 echo 'Configuring overcommit (to apply git hooks - quality threshold)'
 overcommit --install

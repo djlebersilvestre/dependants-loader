@@ -1,69 +1,99 @@
-# SimpleCov Rcov Formatter gem
+descendants-loader
+============
 
-![SimpleCov Rcov logo](http://farm7.static.flickr.com/6066/6092747137_965f5816ea_o.gif)
+If you had any trouble trying to find dynamically the classes that implements a base/parent class, maybe this gem could help you.
 
-Is a Rcov style formatter for the ruby 1.9+ coverage gem: [SimpleCov](http://github.com/colszowka/simplecov).
+This is often seen when working with Rails on development/test environment since the eager_load is set to false by default, therefore all the classes are loaded dynamically when requested.
 
-The target of this formatter is to cheat on **Hudson** so I can use the [Ruby metrics plugin](http://github.com/hudson/rubymetrics-plugin) with **SimpleCov**.
+Due to that, when you call something like `MyBaseClass.descendants` or `MyBaseClass.subclasses` it will return an empty array if the descendants/subclasses weren't accessed earlier.
 
-So if you are looking some kind of workaround to integrate **SimpleCov** with your **Hudson** + **Ruby metrics plugin** this is a beginning.
+Getting started
+---------------
 
-## Install
+1.  Add descendants-loader to your `Gemfile` and `bundle install`:
+```ruby
+gem 'descendants-loader'
+```
 
-$ [sudo] gem install simplecov-rcov
+2.  Load the module and use it according to the example bellow:
+```ruby
+require 'descendants_loader'
 
-## Usage
+class MyBaseClass
+  include DescendantsLoader
 
-require 'simplecov-rcov'
-SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+  ... methods / your implementation ...
+end
+```
 
-Or if you want to share this formatter with another formatter like *HTML formatter* you can add both:
+When the module DescendantsLoader is included it overwrites the static methods `Object.descendants` and `Object.subclasses`.
+Basically it forces the autoloading of all classes under the same directory (recursivelly) of the base class.
+Finally it calls super, returning the expect subclasses.
 
-require 'simplecov'
-require 'simplecov-rcov'
-  class SimpleCov::Formatter::MergedFormatter
-  def format(result)
-  SimpleCov::Formatter::HTMLFormatter.new.format(result)
-SimpleCov::Formatter::RcovFormatter.new.format(result)
-  end
-  end
-  SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+Continuing with the example (subclasses under the same directory structure of `MyBaseClass`):
+```ruby
+class SonA < MyBaseClass
+  ...
+end
+class SonB < MyBaseClass
+  ...
+end
+class SonC < MyBaseClass
+  ...
+end
+class GrandSonA < SonA
+  ...
+end
+```
 
-  You can also add a flag support so if you don't run the tests activating the *COVERAGE* environment variable to *on* the coverage report won't be used:
+Calling those methods we get the following output:
+> MyBaseClass.subclasses
+=> [SonA, SonB, SonC]
+> MyBaseClass.descendants
+=> [SonA, SonB, SonC, GrandSonA]
 
-  if( ENV['COVERAGE'] == 'on' )
-  require 'simplecov'
-  require 'simplecov-rcov'
-  class SimpleCov::Formatter::MergedFormatter
-  def format(result)
-  SimpleCov::Formatter::HTMLFormatter.new.format(result)
-SimpleCov::Formatter::RcovFormatter.new.format(result)
-  end
-  end
-  SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
-  SimpleCov.start 'rails' do
-  add_filter "/vendor/"
-  end
-  end
+## Contact
 
-  Run it using this:
+*Code and Bug Reports*
 
-  $ COVERAGE=on rake test
+* [Issue Tracker](https://github.com/djlebersilvestre/dependants-loader/issues)
 
-## ISSUES
+*Questions, Problems, Suggestions, etc.*
 
-  To add the gem to the **Gemfile** try to do it this way:
+* [Github - Daniel Silvestre](https://github.com/djlebersilvestre)
 
-  gem 'simplecov', :require => false
-  gem 'simplecov-rcov', :require => false
+## Contributing
 
-  And require the gems just before use the *SimpleCov* constant, like in the examples above.
+To fetch & test the library for development, do:
 
-  If not could be *Uninitialized constant SimpleCov* issues.
+```bash
+git clone https://github.com/djlebersilvestre/dependants-loader.git
+cd dependants-loader
+./script/setup_dev_env.sh
+```
 
-## Credits
+If you want to contribute, please:
 
-  * Author: [Fernando Guillen](http://fernandoguillen.info)
-  * Contributors: [Wes Morgan](http://github.com/cap10morgan), [Wandenberg Peixoto](http://github.com/wandenberg)
-  * Copyright: Copyright (c) 2010 Fernando Guillen
-  * License: Released under the MIT license.
+  * Fork the project.
+  * Make your feature addition or bug fix.
+  * Add tests for it. This is important so I don't break it in a future version unintentionally.
+  * **Bonus Points** go out to anyone who also updates `CHANGELOG.md` :)
+  * Send me a pull request on Github.
+
+## Running Individual Tests
+
+This project uses Rspec. Individual tests can be run like this:
+
+```bash
+bundle exec rspec path/to/test.rb
+```
+
+## Copyright
+
+Copyright (c) 2015 Daniel Silvestre. See MIT-LICENSE for details.
+
+## TODOs
+
+* Implement tests!! (and raise the minimum coverage to 95%)
+* Put travis to work.
+* Add build tags / icons in this README.
