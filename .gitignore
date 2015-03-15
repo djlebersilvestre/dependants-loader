@@ -6,3 +6,6 @@
 /coverage/*
 !/coverage/.last_run.json
 /rubycritic
+
+# Ignore pkg dir - where the gem will be created
+/pkg
