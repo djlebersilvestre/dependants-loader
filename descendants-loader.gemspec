@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.summary     = 'An Object.descendants and Object.subclasses loader'
   s.description = 'The desired classes will have an autoload of its hierarchy'
-  s.author      = 'Daniel Silvestre'
-  s.email       = 'djlebersilvestre@gmail.com'
+  s.authors     = ['Daniel Silvestre']
+  s.email       = ['djlebersilvestre@gmail.com']
   s.homepage    = 'http://github.com/djlebersilvestre/descendants-loader'
 
   s.files         = Dir['lib/**/*.rb'].select { |f| File.file?(f) }
