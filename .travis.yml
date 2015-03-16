@@ -8,7 +8,9 @@ before_install:
   - gem install overcommit
 
 script:
-  - bundle exec rake
+  - overcommit --install
+  - overcommit --sign pre-commit
+  - mv .git/hooks/post-checkout .git/hooks/post-checkout.sample
   - overcommit -r
 
 rvm:
