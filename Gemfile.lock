@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    descendants-loader (0.0.3)
+    descendants-loader (0.0.4)
       activesupport (>= 3.2)
 
 GEM
