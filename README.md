@@ -1,4 +1,4 @@
-descendants-loader
+descendants-loader [![Build Status](https://travis-ci.org/djlebersilvestre/descendants-loader.svg?branch=master)](https://travis-ci.org/djlebersilvestre/descendants-loader)
 ============
 
 If you had any trouble trying to find dynamically the classes that implements a base/parent class, maybe this gem could help you.
