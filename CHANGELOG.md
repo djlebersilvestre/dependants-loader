@@ -1,12 +1,17 @@
-Unreleased ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.1...master))
+Unreleased ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.4...master))
+====================
+
+* Not started
+
+0.0.4, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.4...v0.0.3))
 ====================
 
 ## Testing, travis and badges
 
 * DescendantsLoader::ClassFinder specs
-* DescendantsLoader specs
-* Travis
-* Badges 1....5, everything updated in README
+* DescendantsLoader specs and docs
+* Travis running overcommit checks and continuous deployment to RubyGems
+* Badges updated in README
 
 0.0.3, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.3...v0.0.2))
 ====================
