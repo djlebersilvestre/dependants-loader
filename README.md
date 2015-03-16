@@ -94,6 +94,4 @@ Copyright (c) 2015 Daniel Silvestre. See MIT-LICENSE for details.
 
 ## TODOs
 
-* Implement tests!! (and raise the minimum coverage to 95%)
-* Put travis to work.
-* Add build tags / icons in this README.
+* Test compatibility with other ruby versions.
