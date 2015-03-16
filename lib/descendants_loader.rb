@@ -1,4 +1,5 @@
 require 'active_support/core_ext/string/inflections'
+require 'active_support/core_ext/class/subclasses'
 
 path = File.expand_path(File.dirname(__FILE__))
 Dir["#{path}/descendants_loader/**/*.rb"].each do |file|

@@ -5,7 +5,7 @@ SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
 SimpleCov.start do
   `git checkout origin/master coverage/.last_run.json`
 
-  minimum_coverage(77)
+  minimum_coverage(96)
   maximum_coverage_drop(2)
 
   add_filter 'spec/'
