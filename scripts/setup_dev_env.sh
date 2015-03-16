@@ -18,6 +18,7 @@ gem install travis
 gem install rubocop
 gem install rubycritic
 gem install overcommit
+gem install rubycritic
 
 echo 'Configuring overcommit (to apply git hooks - quality threshold)'
 overcommit --install
