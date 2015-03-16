@@ -14,9 +14,10 @@ echo 'Vendorizing gems'
 bundle install --path vendor/bundle
 
 echo 'Adding base gems to gemset'
+gem install travis
 gem install rubocop
-gem install overcommit
 gem install rubycritic
+gem install overcommit
 
 echo 'Configuring overcommit (to apply git hooks - quality threshold)'
 overcommit --install
