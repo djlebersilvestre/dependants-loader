@@ -1,21 +1,26 @@
 language: ruby
-
 before_install:
-  - bundle install
-  - gem install travis
-  - gem install rubocop
-  - gem install rubycritic
-  - gem install overcommit
-
+- bundle install
+- gem install travis
+- gem install rubocop
+- gem install rubycritic
+- gem install overcommit
 script:
-  - overcommit --install
-  - overcommit --sign pre-commit
-  - mv .git/hooks/post-checkout .git/hooks/post-checkout.sample
-  - overcommit -r
-
+- overcommit --install
+- overcommit --sign pre-commit
+- mv .git/hooks/post-checkout .git/hooks/post-checkout.sample
+- overcommit -r
 rvm:
-  - 2.2.1
-  - 2.2.0
-  - 2.1.5
-  - 2.0.0
-  - 1.9.3
+- 2.2.1
+- 2.2.0
+- 2.1.5
+- 2.0.0
+- 1.9.3
+deploy:
+  provider: rubygems
+  api_key:
+    secure: NUKL0FyypZDKt5A2KtE711Tnut184BWaH6Tl++kqQXsw75iMUwI6EogW0VbYnhFCUrIeK4hxTBBVJvxHdHBxDP2EscRRFELC0mpoP92NckReHAW/BEOIDhn7vSUAbMAlrU5uzoE6NEwY5kOlVJGStAFonrX+fJQ7T3FwbMclu68=
+  gem: descendants-loader
+  on:
+    tags: true
+    repo: djlebersilvestre/descendants-loader
