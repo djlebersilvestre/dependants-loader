@@ -18,15 +18,14 @@ Gem::Specification.new do |gem|
   gem.summary     = gem.description
   gem.license     = 'MIT'
 
-  gem.required_ruby_version = '>= 2.0.0'
-
   gem.files         = Dir['lib/**/*.rb'].select { |f| File.file?(f) }
   gem.test_files    = Dir['spec/**/*.rb'].select { |f| File.file?(f) }
   gem.require_paths = ['lib']
 
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'simplecov-rcov'
-  gem.add_runtime_dependency 'activesupport'
+  gem.required_ruby_version = '>= 1.9.3'
+  gem.add_development_dependency 'rake', '>= 10.0'
+  gem.add_development_dependency 'rspec', '~> 3.0'
+  gem.add_development_dependency 'simplecov', '~> 0.7'
+  gem.add_development_dependency 'simplecov-rcov', '~> 0.2'
+  gem.add_runtime_dependency 'activesupport', '>= 3.2'
 end
