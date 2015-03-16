@@ -3,7 +3,7 @@ descendants-loader
 
 If you had any trouble trying to find dynamically the classes that implements a base/parent class, maybe this gem could help you.
 
-This is often seen when working with Rails on development/test environment since the eager_load is set to false by default, therefore all the classes are loaded dynamically when requested.
+This is often seen when working with Rails on development/test environment since the eager_load is set to false by default, therefore all the classes are loaded dynamically when requested instead of being loaded in the bootstrap.
 
 Due to that, when you call something like `MyBaseClass.descendants` or `MyBaseClass.subclasses` it will return an empty array if the descendants/subclasses weren't accessed earlier.
 
