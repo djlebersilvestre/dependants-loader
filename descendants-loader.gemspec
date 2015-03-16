@@ -12,10 +12,8 @@ Gem::Specification.new do |s|
   s.email       = 'djlebersilvestre@gmail.com'
   s.homepage    = 'http://github.com/djlebersilvestre/descendants-loader'
 
-  s.files         = `git ls-files`.split('\n')
-  s.test_files    = `git ls-files -- {spec}/*`.split('\n')
-  s.executables   = `git ls-files -- bin/*`.split('\n')
-    .map { |f| File.basename(f) }
+  s.files         = Dir['lib/**/*.rb'].select { |f| File.file?(f) }
+  s.test_file     = Dir['spec/**/*.rb'].select { |f| File.file?(f) }
   s.require_paths = ['lib']
 
   s.add_development_dependency 'rake'
