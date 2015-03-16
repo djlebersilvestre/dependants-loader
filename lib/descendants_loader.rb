@@ -29,6 +29,8 @@ module DescendantsLoader
       classes
     end
 
+    private
+
     def load_self_descendants
       file = ClassFinder.where_is(self)
       path = File.expand_path(File.dirname(file))
