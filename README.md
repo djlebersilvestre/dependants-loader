@@ -1,4 +1,4 @@
-descendants-loader [![Build Status](https://travis-ci.org/djlebersilvestre/descendants-loader.png)](https://travis-ci.org/djlebersilvestre/descendants-loader) [![Dependency Status](https://gemnasium.com/djlebersilvestre/descendants-loader.png)](https://gemnasium.com/djlebersilvestre/descendants-loader) [![Inline docs](http://inch-ci.org/github/djlebersilvestre/descendants-loader.png)](http://inch-ci.org/github/djlebersilvestre/descendants-loader)
+descendants-loader [![Build Status](https://travis-ci.org/djlebersilvestre/descendants-loader.png)](https://travis-ci.org/djlebersilvestre/descendants-loader) [![Dependency Status](https://gemnasium.com/djlebersilvestre/descendants-loader.png)](https://gemnasium.com/djlebersilvestre/descendants-loader) [![Inline docs](http://inch-ci.org/github/djlebersilvestre/descendants-loader.png)](http://inch-ci.org/github/djlebersilvestre/descendants-loader) [![Gem Version](https://badge.fury.io/rb/descendants-loader.png)](http://badge.fury.io/rb/descendants-loader)
 ============
 
 If you had any trouble trying to find dynamically the classes that implements a base/parent class, maybe this gem could help you.
