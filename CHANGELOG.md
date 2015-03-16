@@ -3,7 +3,7 @@ Unreleased ([changes](https://github.com/djlebersilvestre/descendants-loader/com
 
 * Not started
 
-0.0.4, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.4...v0.0.3))
+0.0.4, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.3...v0.0.4))
 ====================
 
 ## Testing, travis and badges
@@ -13,14 +13,14 @@ Unreleased ([changes](https://github.com/djlebersilvestre/descendants-loader/com
 * Travis running overcommit checks and continuous deployment to RubyGems
 * Badges updated in README
 
-0.0.3, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.3...v0.0.2))
+0.0.3, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.2...v0.0.3))
 ====================
 
 ## Adjustments
 
 * Incorrect github links in rubygems.
 
-0.0.2, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.2...v0.0.1))
+0.0.2, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.1...v0.0.2))
 ====================
 
 ## First Version
