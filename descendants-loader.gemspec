@@ -9,8 +9,13 @@ Gem::Specification.new do |gem|
   gem.authors     = ['Daniel Silvestre']
   gem.email       = ['djlebersilvestre@gmail.com']
   gem.homepage    = 'http://github.com/djlebersilvestre/descendants-loader'
-  gem.summary     = 'An Object.descendants and Object.subclasses loader'
-  gem.description = 'The desired classes will autoload its hierarchy'
+  gem.description = %{
+    This gem is an Object.descendants and Object.subclasses loader.
+    The desired classes will have an autoload of its hierarchy.
+    This aims a problem with lazy loading ruby classes (usually under
+    development environment). For more information please check README.
+  }
+  gem.summary     = gem.description
   gem.license     = 'MIT'
 
   gem.required_ruby_version = '>= 2.0.0'
