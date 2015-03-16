@@ -1,21 +1,21 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'descendants_loader/version'
 
 Gem::Specification.new do |s|
   s.name        = 'descendants-loader'
   s.version     = DescendantsLoader::VERSION
-  s.authors     = ['Daniel Silvestre']
-  s.email       = ['djlebersilvestre@gmail.com']
-  s.homepage    = 'http://github.com/djlebersilvestre/descendants-loader'
+  s.license     = 'MIT'
   s.summary     = 'An Object.descendants and Object.subclasses loader'
   s.description = 'The desired classes will have an autoload of its hierarchy'
-
-  s.rubyforge_project = 'descendants-loader'
+  s.author      = 'Daniel Silvestre'
+  s.email       = 'djlebersilvestre@gmail.com'
+  s.homepage    = 'http://github.com/djlebersilvestre/descendants-loader'
 
   s.files         = `git ls-files`.split('\n')
   s.test_files    = `git ls-files -- {spec}/*`.split('\n')
-  s.executables   = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
+  s.executables   = `git ls-files -- bin/*`.split('\n')
+    .map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
   s.add_development_dependency 'rake'
