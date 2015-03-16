@@ -1,4 +1,16 @@
 language: ruby
+
+before_install:
+  - bundle install
+  - gem install travis
+  - gem install rubocop
+  - gem install rubycritic
+  - gem install overcommit
+
+script:
+  - bundle exec rake
+  - overcommit -r
+
 rvm:
   - 2.2.1
   - 2.2.0

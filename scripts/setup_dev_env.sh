@@ -27,3 +27,6 @@ mv .git/hooks/post-checkout .git/hooks/post-checkout.sample
 
 echo 'Running specs for the first time  ;)'
 bundle exec rspec
+
+echo 'Running overcommit for the first time  ;)'
+overcommit -r
