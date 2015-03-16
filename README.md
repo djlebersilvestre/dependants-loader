@@ -56,7 +56,7 @@ Calling those methods we get the following output:
 
 *Code and Bug Reports*
 
-* [Issue Tracker](https://github.com/djlebersilvestre/dependants-loader/issues)
+* [Issue Tracker](https://github.com/djlebersilvestre/descendants-loader/issues)
 
 *Questions, Problems, Suggestions, etc.*
 
@@ -67,8 +67,8 @@ Calling those methods we get the following output:
 To fetch & test the library for development, do:
 
 ```bash
-git clone https://github.com/djlebersilvestre/dependants-loader.git
-cd dependants-loader
+git clone https://github.com/djlebersilvestre/descendants-loader.git
+cd descendants-loader
 ./script/setup_dev_env.sh
 ```
 
