@@ -12,14 +12,7 @@ module DescendantsLoader
       def class_name_from_path(path)
         ary = path.split('/')
         ary.map! { |s| s.gsub(/\.rb/, '') }
-
-        index = ary.index('models') ||
-          ary.index('workers') ||
-          ary.index('helpers') ||
-          ary.index('controllers') ||
-          ary.index('mailers') ||
-          ary.index('lib')
-        ary.slice!(0, index + 1)
+        ary.slice!(0, index_of_base_dir(ary) + 1)
 
         ary.map(&:camelize).join('::')
       end
@@ -52,6 +45,16 @@ module DescendantsLoader
 
       def class_and_source_eq?(klass, file)
         class_name_from_path(file) == klass.to_s
+      end
+
+      def index_of_base_dir(path_array)
+        base_dirs = %w(lib models workers schedulers controllers mailers)
+        index = base_dirs.map { |dir| path_array.index(dir) }.compact.first
+
+        fail ArgumentError, 'Not a valid file path. Expect to ' \
+          'have a base known directory.' if index.nil?
+
+        index
       end
     end
   end
