@@ -2,11 +2,11 @@ PreCommit:
   Rubocop:
     on_warn: fail
 
-AuthorEmail:
-  enable: false
+  ShellCheck:
+    enabled: false
 
-AuthorName:
-  enable: false
+  AuthorEmail:
+    enabled: false
 
-ShellCheck:
-  enable: false
+  AuthorName:
+    enabled: false
