@@ -3,10 +3,7 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo 'Installing dependency for overcommit'
-sudo apt-get install -y shellcheck
-
-echo 'Using RVM (loading from .bash_profile)'
+echo 'Loading RVM - it must be installed as user mode'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 rvm use 2.2.1@descendants-loader --create
 
@@ -18,15 +15,14 @@ gem install travis
 gem install rubocop
 gem install rubycritic
 gem install overcommit
-gem install rubycritic
 
 echo 'Configuring overcommit (to apply git hooks - quality threshold)'
 overcommit --install
 overcommit --sign pre-commit
 mv .git/hooks/post-checkout .git/hooks/post-checkout.sample
 
-echo 'Running specs for the first time  ;)'
+echo 'Finally, testing for the first time'
 bundle exec rspec
 
-echo 'Running overcommit for the first time  ;)'
+echo 'Running everything attached to overcommit (specs too)  ;)'
 overcommit -r
