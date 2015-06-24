@@ -1,7 +1,17 @@
 Unreleased ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.4...master))
 ====================
 
-* Not started
+## Updating gem due to possible DoS at activesupport
+
+0.0.6, 2015-06-24 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.5...v0.0.6))
+====================
+
+## UPDATE
+
+0.0.5, 2015-0X-XX ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.4...v0.0.5))
+====================
+
+## UPDATE
 
 0.0.4, 2015-03-16 ([changes](https://github.com/djlebersilvestre/descendants-loader/compare/v0.0.3...v0.0.4))
 ====================
